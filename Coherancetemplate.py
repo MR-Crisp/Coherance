@@ -143,8 +143,6 @@ res   = model.fit()                                 # ... and fit it.
 phi_predict = linspace(-pi, pi, 100)
 X_predict   = transpose([ones(shape(phi_predict)), cos(phi_predict), sin(phi_predict)])
 Y_predict   = res.get_prediction(X_predict, linear='False')
-
-Wn = [9,11]                                  #Define the passband, here from 9-11 Hz.
 FTA, phi_axis = FTA_function(y,n,t,Wn)       #Compute the FTA.
 
 
@@ -178,6 +176,6 @@ plot(phi_axis, FTA)                          #... and plot it, along with the mo
 plot(phi_predict, Y_predict.predicted_mean, 'k')
 plot(phi_predict, Y_predict.conf_int(), 'k:')
 xlabel('Phase')
-ylabel('Probability of a spike');
+ylabel('Probability of a spike')
 
 show()
