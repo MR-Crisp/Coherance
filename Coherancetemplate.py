@@ -6,6 +6,7 @@ from scipy.fft import *
 from scipy import signal
 from scipy import stats
 import statsmodels.api as sm
+from pprint import pprint
 
 rcParams['figure.figsize']=(12,3)                   # Change the default figure size
 
@@ -14,6 +15,7 @@ rcParams['figure.figsize']=(12,3)                   # Change the default figure 
 data = sio.loadmat('spikes-LFP-1.mat')  # Load the multiscale data,
 y = data['y']                                # ... get the LFP data,
 n = data['n']                                # ... get the spike data,
+pprint(n)
 t = data['t'].reshape(-1)                    # ... get the time axis,
 #plot(t,y[1,:])                               # ... and visualize the data, for the first trial.
 #plot(t,n[1,:])

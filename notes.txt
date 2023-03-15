@@ -1,0 +1,44 @@
+
+sci py sos filter 
+
+examples in the voltage module
+
+several chanels: has voltage trace - several antena
+
+sampled at 25htz - 2500 samples in 1 sec(voltage) 
+
+visualization:
+
+http://reveal.internationalbrainlab.org.s3-website-us-east-1.amazonaws.com/benchmarks.html - 3rd slide is the visulisation of the raw data: on the y axis is the chanels and on the x axis is the time
+
+https://github.com/int-brain-lab/ibl-neuropixel - viewing the data.
+
+To do:
+
+Use python3.10 and get out of the conda nonsense (there is no need)
+
+
+research:
+
+https://en.wikipedia.org/wiki/Bell_Labs
+- shannon information theory
+-shannon sampling theorem
+* need to understand -alaising
+
+
+filter data using: https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.sosfilt.html - use this for sampling
+
+
+slice the data to only find one chanel
+view the data in the chanel 
+then push it through the mark Kramer github template.
+then message him back
+
+blue - visual 
+green - hipocampus
+pink - thalamus
+
+http://reveal.internationalbrainlab.org.s3-website-us-east-1.amazonaws.com/2023-02-28_lfp_reproducible.html#/8
+
+choose a chanel in the green to work in
+

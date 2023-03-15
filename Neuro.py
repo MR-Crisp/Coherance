@@ -11,9 +11,6 @@ from ibllib.io import spikeglx
 
 
 
-
-
-
 def ephysToLfp():
     lf_file = "C:/Users/akaam/Downloads/ONE/openalyx.internationalbrainlab.org/angelakilab/Subjects/NYU-45/2021-07-19/001/raw_ephys_data/probe00/_spikeglx_ephysData_g0_t0.imec0.lf.cbin"
     return spikeglx.Reader(lf_file)
@@ -45,7 +42,7 @@ tsel = slice(int(s0), int(s0) + int(time_win * sr.fs))
 raw = sr[tsel, :-sr.nsync].T
 destriped = destripe(raw, fs=sr.fs)
 
-pprint(destriped[0])
+print(spikes['times'])
 
 # plt.rcParams['figure.figsize']=(12,3)                   # Change the default figure size
 
@@ -62,8 +59,6 @@ pprint(destriped[0])
 
 
 # plt.show() 
-
-
 
 
 
