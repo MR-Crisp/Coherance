@@ -7,7 +7,7 @@ from ibllib.plots import Density
 import matplotlib.pyplot as plt
 from neurodsp.voltage import destripe
 import numpy as np
-from ibllib.io import spikeglx
+#from ibllib.io import spikeglx
 
 
 
@@ -42,7 +42,7 @@ tsel = slice(int(s0), int(s0) + int(time_win * sr.fs))
 raw = sr[tsel, :-sr.nsync].T
 destriped = destripe(raw, fs=sr.fs)
 
-print(spikes['times'])
+pprint(destriped[240])
 
 # plt.rcParams['figure.figsize']=(12,3)                   # Change the default figure size
 
